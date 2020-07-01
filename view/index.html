@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      img{
+        height: 500px;
+      }
+
+      tr td{
+        border-bottom: 1px solid #afafaf;
+        padding: 5px;
+      }
+
+      tr td:first-child{
+        width: 400px;
+      }
+
+      td{
+        vertical-align: top;
+      }
+
+      .sentiment--negative{
+        color: red;
+      }
+
+      .sentiment--positive{
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h2>
+      Question: %%question%%
+    </h2>
+
+    <table>
+      <tr>
+        <td>Answers</td>
+        <td>Sentiment</td>
+        <td>Category</td>
+      </tr>
+      %%tableRowResults%%
+    </table>
+  </body>
+</html>

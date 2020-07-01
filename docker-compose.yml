@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    ports:
+      - '80:80'
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=./gcloud_credentials.json
+      - PORT=80
